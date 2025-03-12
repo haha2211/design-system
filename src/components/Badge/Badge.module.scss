@@ -1,0 +1,58 @@
+// Badge.module.scss
+
+$colors: (
+  positive: #28a745,
+  informative: #007bff,
+  negative: #dc3545,
+  neutral: #f0ad4e
+);
+
+$font-sizes: (
+  small: 1rem,
+  medium: 1.2rem,
+  large: 1.4rem
+);
+
+$padding: (
+  small: .4rem .8rem,
+  medium: .6rem 1.2rem,
+  large: .8rem 1.6rem
+);
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: .4rem;
+  white-space: nowrap;
+
+  &.rounded {
+    border-radius: 9999px;
+  }
+
+  &.square {
+    border-radius: .4rem;
+  }
+
+  @each $size, $font-size in $font-sizes {
+    &.#{$size} {
+      font-size: $font-size;
+      padding: map-get($padding, $size);
+    }
+  }
+
+  @each $status, $color in $colors {
+    &.#{$status} {
+      background-color: $color;
+      color: #fff;
+    }
+  }
+
+  .icon {
+    max-width: 1.6rem;
+    margin-right: .4rem;
+    display: flex;
+    align-items: center;
+  }
+}

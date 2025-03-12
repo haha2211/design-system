@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.accordion {
+  border-bottom: 1px solid #E7EAEC;
+}
+.accordion:last-child {
+  border-bottom: none;
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+.accordion__header svg {
+  max-width: 1.6rem;
+}
+
+.accordion__arrow {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg); /* 기본 상태에서 화살표 방향 */
+}
+
+.accordion__arrow.open {
+  transform: rotate(180deg); /* 열렸을 때 화살표 회전 */
+}
+
+.accordion__content {
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.cont_wrap {
+  margin-bottom: 4rem;
+}
+.cont_wrap:last-child {
+  margin-bottom: 0;
+}
+.cont_wrap p {
+  font-size: 1.4rem;
+}
+.cont_wrap .cont {
+  margin-top: 2rem;
+  padding: 4rem;
+  background: var(--grey100);
+  border-radius: 2rem;
+}
+.cont_wrap .cont img {
+  max-width: 40rem;
+}
+.cont_wrap .cont ol {
+  margin-top: 2rem;
+}
+.cont_wrap .cont li {
+  font-size: 1.4rem;
+}
+.cont_wrap .img_wrap {
+  display: flex;
+}
